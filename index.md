@@ -1,4 +1,4 @@
-#[Notes on TeamCity for .NET](https://vglushko.github.io/ci/notes-on-teamcity-for-dotnet-part1.md)
+# [Notes on TeamCity for .NET](https://vglushko.github.io/ci/notes-on-teamcity-for-dotnet-part1.md)
 
 ## Welcome to GitHub Pages
 
