@@ -7,3 +7,10 @@ categories: [ci]
 ---
 ## {{page.title}}
 These are notes on how to set up elements of .NET solution CI process in TeamCity
+
+{% highlight c# linenos %}
+public class Test 
+{
+    public int Test { get; set; }
+}
+{% endhighlight %}
