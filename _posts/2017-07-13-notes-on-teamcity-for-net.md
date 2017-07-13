@@ -6,4 +6,4 @@ version: 1.0.0
 categories: [ci]
 ---
 ## {{page.title}}
-This is are notes on how to set up elements of .NET solution CI process in TeamCity
+These are notes on how to set up elements of .NET solution CI process in TeamCity
