@@ -1,3 +1,8 @@
+---
+layout: post
+title: Setting up your personal blog with GitHub Pages
+---
+
 Blog on GitHub
 
 1. Create pages repository on GitHub
@@ -19,5 +24,5 @@ Blog on GitHub
 	Changes to _config.yml are not included during automatic
 6. Jekyll configuration (https://jekyllrb.com/docs/configuration/)
 7. Directory structure (https://jekyllrb.com/docs/structure/)
-8. 
+8.
 
