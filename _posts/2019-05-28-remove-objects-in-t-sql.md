@@ -12,11 +12,11 @@ tags: [snippets]
 DECLARE @sqlConstraints NVARCHAR(MAX) = N'';
 SELECT @sqlConstraints = @sqlConstraints 
     + N'ALTER TABLE ' + quotename(s.name) + N'.' + quotename(t.name) 
-        + N' DROP CONSTRAINT ' + quotename(c.name) + ';' + CHAR(13)
+        + N' DROP CONSTRAINT ' + quotename(o.name) + ';' + CHAR(13)
 FROM sys.objects o 
 JOIN sys.tables t ON o.parent_object_id = t.[object_id]
 JOIN sys.schemas s ON t.[schema_id] = s.[schema_id]
-WHERE o.[type] IN ('D','C','F','PK','UQ') AND s.[name] = 'dbo'
+WHERE o.[type] IN ('D','C','F','UQ') AND s.[name] = 'dbo'
 
 exec sp_executesql @sqlConstraints;
 ```
