@@ -1,7 +1,7 @@
-title: Software Development
+title: Just Another Microblog
 email: ""
 description: >- # this means to ignore newlines until "baseurl:"
-  Microblog on everything related to software development
+  Everything related to software development and beyond
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
