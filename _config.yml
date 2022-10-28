@@ -16,6 +16,11 @@ plugins:
 show_excerpts: true
 excerpt_separator: <!--more-->
 
+minima:
+  social_links:
+    twitter: vglushko
+    linkedin: vitaliy-glushko-68b89721
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
