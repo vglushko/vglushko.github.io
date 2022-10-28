@@ -1,3 +1,4 @@
+<!--more-->
 Contents:
 1. Overview (purpose, general idea)
 https://docs.microsoft.com/en-us/office/troubleshoot/word/custom-xml-markup-is-removed

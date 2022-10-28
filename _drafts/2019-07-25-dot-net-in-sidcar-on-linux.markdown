@@ -1,3 +1,4 @@
+<!--more-->
 Contents:
 1. Overview (purpose, general idea)
 2. Sidecar pattern

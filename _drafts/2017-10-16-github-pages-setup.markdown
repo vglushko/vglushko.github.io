@@ -2,7 +2,7 @@
 layout: post
 title: Setting up your personal blog with GitHub Pages
 ---
-
+<!--more-->
 Blog on GitHub
 
 1. Create pages repository on GitHub

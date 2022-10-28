@@ -1,3 +1,4 @@
+<!--more-->
 Contents:
 1. Overivew
 2. State of the art

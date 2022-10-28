@@ -1,3 +1,4 @@
+<!--more-->
 0. Install VirtualBox Guest Additions. (see http://www.giannistsakiris.com/2008/04/09/virtualbox-access-windows-host-shared-folders-from-ubuntu-guest/)
 GUI-less: https://www.techrepublic.com/article/how-to-install-virtualbox-guest-additions-on-a-gui-less-ubuntu-server-host/
 1. sudo apt-get update && sudo apt-get dist-upgrade

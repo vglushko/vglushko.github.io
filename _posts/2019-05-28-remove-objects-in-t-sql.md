@@ -2,10 +2,14 @@
 layout: post
 title: "Remove Tables, Constraints, Functions from a Database Schema"
 date: 2019-05-28 12:49:46 +0300
-category: database
+category: snippets
 tags: 
   - mssql
+  - rdbms
 ---
+
+SQL snippets on how to empty a Microsoft SQL Server database by removing all tables, constraints and functions.
+<!--more-->
 
 # Remove all constraints:
 
