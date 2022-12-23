@@ -9,3 +9,5 @@ gem "jekyll-feed"
 gem "jekyll-seo-tag"
 gem "webrick"
 gem "jekyll-theme-tactile"
+
+gem "jekyll-sitemap", "~> 1.4"

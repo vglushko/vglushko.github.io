@@ -4,14 +4,9 @@ title: "Development Environment for Python Projects"
 date: 2022-12-22 09:00:00 +0300
 category: development
 tags: 
-  - python3
-  - pyenv
-  - poetry
-  - flake8
-  - black
-  - mypy
-  - make
-  
+  - python
+  - development
+
 ---
 Starting a new team project takes a lot of efforts. Part of them is the development and implementation of a strategy for configuring the local development environment that every teammate uses for their everyday coding activities. The ultimate goal here is to build the environment that assists the developers to keep high the quality of the code they develop as a part of one team. Traditionally, this goal is achieved by following a team coding guidelines and development standards.<!--more--> 
 

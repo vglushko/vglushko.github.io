@@ -12,6 +12,7 @@ markdown: kramdown
 theme: jekyll-theme-tactile
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 show_excerpts: true
 excerpt_separator: <!--more-->

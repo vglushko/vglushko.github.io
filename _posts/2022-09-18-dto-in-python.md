@@ -4,10 +4,8 @@ title: "Data Transfer Objects (DTO) in Python"
 date: 2022-10-27 09:10:46 +0300
 category: design
 tags: 
-  - python3
-  - dto
-  - dataclass
-  - namedtuple
+  - python
+  - development
 ---
 
 How often did you find yourself implementing loads of objects or classes which only purpose were to keep data for a moment on the route from one software component to another? Usually, it happens all the time especially if you are separating the concerns in software, probably, according to [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html){:target="_blank"}, [Layered Architecture](https://en.wikipedia.org/wiki/Multitier_architecture){:target="_blank"}, or similar principles of code organization. <!--more--> According to them, you are taking care of isolation of your components and managment of directions of their dependencies. Some components communicate with others to do their job and inevitably share a part of their state. You want to avoid any leakage of the component specifics and keep their coupling as low as possible. So, you use [Data Transfer Objects](https://en.wikipedia.org/wiki/Data_transfer_object){:target="_blank"} (DTO) to shape the component communication. Commonly, from implementation perspective, DTOs are objects with the state and no behavior. The [Python Data Model](https://docs.python.org/3/reference/datamodel.html){:target="_blank"} and [Python Standard Library](https://docs.python.org/3/library/){:target="_blank"} offer several options to solve the problem. Among of them are: plain old Python [classes](https://docs.python.org/3/tutorial/classes.html){:target="_blank"}, [collections.namedtuple](https://docs.python.org/3/library/collections.html#collections.namedtuple){:target="_blank"}, [typing.NamedTuple](https://docs.python.org/3/library/typing.html#typing.NamedTuple) and [dataclasses.dataclass](https://docs.python.org/3/library/dataclasses.html).
