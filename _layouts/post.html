@@ -20,12 +20,12 @@ layout: default
 
       {% assign word_count = content | number_of_words %}
       {% if word_count > 220 %}
-      | ~{{ word_count | divided_by: 220 }} minutes read
+        | ~{{ word_count | divided_by: 220 }} minutes read
       {% endif %}
 
       {% if page.tags %} |
       {% for tag in page.tags %}
-      <a class="post-tag" href="{{ site.baseurl }}/tags#{{ tag | slugify }}">{{ tag }}</a>
+        <a class="post-tag" href="{{ site.baseurl }}/tags#{{ tag | slugify }}">{{ tag }}</a>
       {% endfor %}
       {% endif %}
 

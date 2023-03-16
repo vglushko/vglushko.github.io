@@ -13,6 +13,7 @@ theme: jekyll-theme-tactile
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 show_excerpts: true
 excerpt_separator: <!--more-->
