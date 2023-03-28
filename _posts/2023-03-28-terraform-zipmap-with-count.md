@@ -20,7 +20,7 @@ Both lists should be of the same length. The `keylist`{:.yaml} should contain st
 # Use case
 The approach can be used when a Terraform module creates many similar resources of the same type but configured differently.
 
-The module accepts a list of configuration parameters as an input variable to create these distinct resources. A resource inside the module iterates over these configuration parameters to create many instances of this resource type configured appropriately. A key requirement for this use case is that, for a reason, the resource uses the [`count`{:.terraform}](https://developer.hashicorp.com/terraform/language/meta-arguments/count){:target="_blank"} meta-argument for iteration. One of key features of `count`{:.terraform} meta-argumnet is that it indexes a collection of resources by a number starting from 0. It is different, for example, from [`for_each`{:.terraform}](https://developer.hashicorp.com/terraform/language/meta-arguments/for_each) meta-argument which does the indexing by a key.
+The module accepts a list of configuration parameters as an input variable to create these distinct resources. A resource inside the module iterates over these configuration parameters to create many instances of this resource type configured appropriately. A key requirement for this use case is that, for a reason, the resource uses the [`count`{:.terraform}](https://developer.hashicorp.com/terraform/language/meta-arguments/count){:target="_blank"} meta-argument for iteration. One of key features of `count`{:.terraform} meta-argumnet is that it indexes a collection of resources by a number starting from 0. It is different, for example, from [`for_each`{:.terraform}](https://developer.hashicorp.com/terraform/language/meta-arguments/for_each){:target="_blank"} meta-argument which does the indexing by a key.
 
 The module outputs some reference information about the resource instances it has created. Usually, it comes in as a list of unique identifiers of the created resources.
 
@@ -151,7 +151,7 @@ resource "aws_lambda_function" "this" {
 }
 ```
 
-The complete example can be found in the [repository](https://github.com/vglushko/blog-zipmap) on GitHub.
+The complete example can be found in the [repository](https://github.com/vglushko/blog-zipmap){:target="_blank"} on GitHub.
 
 # Conclusion
 The approach in this post is for a niche case of using `count`{:.terraform} meta-argument for iteration. Usually, this meta-argument is the best option to create multiple copies of identical resources. Nowadays, a general recommendation for the creation of resource instances that varies by their input parameters is to use the `for_each`{:.terraform} meta-argument that already returns the result of iteration as a map.
