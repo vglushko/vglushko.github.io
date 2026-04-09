@@ -16,7 +16,7 @@ This is a Jekyll static site generator blog with standard structure:
 ## Build and Test
 ```bash
 # Setup (one-time)
-rbenv local 3.1.4
+rbenv local 3.2.11
 bundle config set --local path vendor/bundle
 bundle install
 
@@ -24,7 +24,7 @@ bundle install
 bundle exec jekyll serve --drafts
 
 # Production build (excludes drafts)
-bundle exec jekyll serve
+bundle exec jekyll build
 ```
 
 ## Conventions
