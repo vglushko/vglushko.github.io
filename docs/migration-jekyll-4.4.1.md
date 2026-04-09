@@ -69,6 +69,21 @@ This report summarizes the migration of the blog project to Jekyll 4.4.1 and the
   - `Gemfile.lock` now shows `BUNDLED WITH 4.0.10`
   - `bundle exec ruby -v`, `bundle exec jekyll build`, and `bundle exec jekyll serve --drafts` run without the DidYouMean deprecation warning
 
+### GitHub Pages deployment pipeline mismatch (dark mode regression)
+- **Problem**: After deployment, the public site rendered without dark theme styles, while local builds looked correct.
+- **Cause**:
+  - GitHub Pages native build path used an older Jekyll runtime than local development.
+  - Deployed stylesheet output did not match the local Sass module pipeline, resulting in missing compiled dark-theme rules.
+- **Fix**:
+  - Introduced GitHub Actions deployment workflow at `.github/workflows/pages.yml`.
+  - Standardized production build on Ruby `3.2.11` and Jekyll `4.4.1` via `ruby/setup-ruby` and `bundle exec jekyll build`.
+  - Configured PRs to `master` for build-only validation and pushes to `master` for artifact deployment to Pages.
+  - Switched GitHub Pages source to **GitHub Actions** to avoid native branch-based Jekyll build.
+- **Result**:
+  - Production now uses the same build toolchain as local.
+  - Dark theme styles are rendered correctly on the deployed site.
+  - CSS output is consistently compiled from the project Sass pipeline.
+
 ## Validation and Verification
 
 ### Build verification
@@ -84,6 +99,7 @@ This report summarizes the migration of the blog project to Jekyll 4.4.1 and the
 
 - `Gemfile`
 - `Gemfile.lock`
+- `.github/workflows/pages.yml`
 - `assets/css/style.scss`
 - `_sass/minima/initialize.scss`
 - `_sass/minima/_base.scss`
@@ -92,6 +108,8 @@ This report summarizes the migration of the blog project to Jekyll 4.4.1 and the
 - `_sass/minima/custom-styles.scss`
 - `_sass/minima/skins/dark.scss`
 - `_sass/minima/skins/classic.scss`
+- `README.md`
+- `.github/copilot-instructions.md`
 
 ## Lessons learned
 

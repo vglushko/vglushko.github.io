@@ -47,9 +47,14 @@
 ## Deployment (GitHub Pages via Actions)
 This repository deploys to GitHub Pages using GitHub Actions so production uses the same Ruby/Jekyll toolchain as local builds.
 
+[![Build and Deploy Jekyll to GitHub Pages](https://github.com/vglushko/vglushko.github.io/actions/workflows/pages.yml/badge.svg)](https://github.com/vglushko/vglushko.github.io/actions/workflows/pages.yml)
+
 ### Workflow behavior
 1. Pull requests targeting `master` run build validation only.
 2. Pushes to `master` run build and deploy `_site` to GitHub Pages.
+
+### Workflow link
+- GitHub Actions workflow: https://github.com/vglushko/vglushko.github.io/actions/workflows/pages.yml
 
 ### Repository setting required
 In GitHub repository settings, set **Pages -> Build and deployment -> Source** to **GitHub Actions**.
