@@ -57,6 +57,18 @@ This report summarizes the migration of the blog project to Jekyll 4.4.1 and the
 - **Cause**: A missing closing brace in the `.footer-heading` block introduced during earlier edits
 - **Fix**: Corrected the block structure and added the missing `}`
 
+### Bundler DidYouMean deprecation warning
+- **Problem**: Commands such as `bundle --version` and `bundle exec ruby -v` printed:
+  - `DidYouMean::SPELL_CHECKERS.merge!` deprecation warning
+- **Cause**: Project runtime still used old Bundler `2.2.32` (vendored Thor code), which calls deprecated DidYouMean API on Ruby `3.2.11`.
+- **Fix**:
+  - Installed a modern Bundler version (`4.0.10`)
+  - Ran `bundler _4.0.10_ update --bundler` to rewrite `Gemfile.lock` metadata
+  - Removed stale vendored gems (`vendor/bundle`) and reinstalled dependencies with the new Bundler context
+- **Result**:
+  - `Gemfile.lock` now shows `BUNDLED WITH 4.0.10`
+  - `bundle exec ruby -v`, `bundle exec jekyll build`, and `bundle exec jekyll serve --drafts` run without the DidYouMean deprecation warning
+
 ## Validation and Verification
 
 ### Build verification
@@ -66,6 +78,7 @@ This report summarizes the migration of the blog project to Jekyll 4.4.1 and the
 ### Output status
 - Site generation completed without runtime Sass warnings
 - Build exit code: `0`
+- Bundler DidYouMean deprecation warning no longer appears in build/serve startup output
 
 ## Files changed
 
