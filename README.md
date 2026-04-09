@@ -23,9 +23,8 @@
 ## Quick start
 1. Install Ruby and Bundler via rbenv:
    ```bash
-   rbenv install 3.1.4
-   rbenv install 3.2.0
-   rbenv local 3.1.4
+   rbenv install 3.2.11
+   rbenv local 3.2.11
    gem install bundler
    ```
 
@@ -42,6 +41,6 @@
 
 ## Notes
 - `vendor/` is ignored by Git and stores project-local gems.
-- Use `rbenv local 3.1.4` in this project directory so the site runs with a compatible Ruby version.
+- Use `rbenv local 3.2.11` in this project directory so the site runs with a compatible Ruby version.
 - If you need another Ruby version, install it with `rbenv install` and switch using `rbenv local` or `rbenv global`.
 `
