@@ -1,3 +1,6 @@
+@use "minima/custom-variables" as *;
+@use "minima/skins/dark" as *;
+
 .post-tag {
   display: inline-block;
   background: $brand-color-dark;
